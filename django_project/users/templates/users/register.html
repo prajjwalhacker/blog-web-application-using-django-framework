@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<div class = "content-section" >
+ <p>JOIN NOW !</p>
+ <form method = "POST">
+    {% csrf_token %}
+    {{form}}
+    <button type ="submit">Sign In</button>
+ </form>
+   <br>
+   <br>
+   <p>Already have a account! <a href = "{% url 'login' %}">Sign In</a></p>
+   
+</div>
+{% endblock content %}
